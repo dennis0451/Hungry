@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.decorators import api_view
 from .models import AppUser as User
 import json
+# from requests_oauthlib import OAuth1
+import http.client
 
 # Create your views here.
 
@@ -13,11 +15,28 @@ def send_the_message(request):
     theIndex = open('static/index.html').read()
     return HttpResponse(theIndex)
 
-# @api_view(['POST'])
-# def test(request):
-#     body = json.loads(request.body)
-#     print(request.data)
-#     return HttpResponse({})
+@api_view(['POST'])
+def test(request):
+    print('got a request!')
+
+    # print(dir(request))
+    food = request.data['food']
+
+    conn = http.client.HTTPSConnection("edamam-recipe-search.p.rapidapi.com")
+
+    headers = {
+        'X-RapidAPI-Key': "2a17de6765mshb02808769540d65p13f41bjsn9bb17a3c9752",
+        'X-RapidAPI-Host': "edamam-recipe-search.p.rapidapi.com"
+        }
+
+    conn.request("GET", f'/search?q={food}', headers=headers)
+
+    res = conn.getresponse()
+    data = res.read()
+
+    # print(data)
+    return HttpResponse(data)
+
 
 @api_view(['POST'])
 def sign_up(request):

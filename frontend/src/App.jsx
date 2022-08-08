@@ -1,32 +1,14 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import Navbar from './components/Navbar'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import SignUp from './pages/SignUp'
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import UserPage from './pages/UserPage'
+import { HashRouter, Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios'
 
-// function getCookie(name) {
-//   let cookieValue = null;
-//   if (document.cookie && document.cookie !== '') {
-//       const cookies = document.cookie.split(';');
-//       for (let i = 0; i < cookies.length; i++) {
-//           const cookie = cookies[i].trim();
-//           // Does this cookie string begin with the name we want?
-//           if (cookie.substring(0, name.length + 1) === (name + '=')) {
-//               cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-//               break;
-//           }
-//       }
-//   }
-//   return cookieValue;
-// }
-// const csrftoken = getCookie('csrftoken');
 
-// console.log('token? ', getCookie())
-// axios.defaults.headers.common['X-CSRFToken'] = getCookie()
 const getCSRFToken = ()=>{
   let csrfToken
 
@@ -51,13 +33,13 @@ function App() {
 
 
   const logOut = function(event){
-    // this isn't actually necessary, since this isn't in a form. but if it WAS a form, we'd need to prevent default.
     event.preventDefault()
     axios.post('/logout').then((response)=>{
       console.log('response from server: ', response)
       whoAmI()
     })
   }
+  console.log(`App.jsx user online: ${user != undefined}`)
 
 
   const whoAmI = async () => {
@@ -66,7 +48,6 @@ function App() {
     // const user = response.data[0].fields
     console.log('user from whoami? ', user, response)
     setUser(user)
-    // window.foo.bar.baz = 'error!'
   }
 
   useEffect(()=>{
@@ -75,20 +56,18 @@ function App() {
 
 
 
-  // function handleLogOut(event){
-  //   event.preventDefault()
-  //   console.log('signed out and taked on home screen')
-  // }
+
 
   return (
     <div className="App">
-      <button onClick={logOut}>Logout</button>
+      {user && <button onClick={logOut}>Logout</button>}
       <Navbar />
       <HashRouter>
         <Routes>
-          <Route path='' element={<HomePage/>}/>
-          <Route path='/login' element={<LoginPage/>}/>
-          <Route path='/signup' element={<SignUp/>}/>
+          <Route path='' element={<HomePage user={user}/>}/>
+          <Route path='/login' element={<LoginPage user={user} />}/>
+          <Route path='/signup' element={<SignUp />}/>
+          <Route path='/userpage' element={<UserPage />}/>
         </Routes>
       </HashRouter>
     </div>

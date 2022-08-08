@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+
 
 function SignUp() {
 
@@ -12,7 +14,6 @@ function SignUp() {
             .then((response) => {
                 console.log('response from server: ', response)
             })
-        console.log('signed up and opens app')
 
     }
     return (
@@ -31,6 +32,8 @@ function SignUp() {
                 />
                 <button type="submit" >Log In</button>
             </form>
+            <Link to="/"><button>return home</button></Link>
+
         </div>
     )
 }
