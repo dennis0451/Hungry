@@ -1,0 +1,12 @@
+[
+    {
+      "model": "hungry_app.recipe",
+      "pk": 1,
+      "fields": {
+        "label": "Sweet Cinnamon Rice Pudding",
+        "image": "https://edamam-product-images.s3.amazonaws.com/web-img/957/957c045ab56f3bd4dd195fb839aeffdd.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDWiR8rvMTEWnq4gpSvGA%2FfJ%2BQr2GBEgLEXrLeIvTPL9AIhAODLb%2FvmcwZLySU%2FYxM7SfgOC9RbFpHxu%2BhURl835IqsKtIECDMQABoMMTg3MDE3MTUwOTg2IgwD9dkHYAH9EPd0jisqrwQBjzkblrVCc7Rp%2FZxzkYVrPOp3Oh6mMx3hjjVTDI%2Brb5faGq%2BAJVLPHnx7FRUCSye7oKpprAvkcuyo9ek51xDIRj0PYXmURqBTPxDfofSD6tyEuyo6LxFq6I0q8Star0R5FbDiIkXEos%2FhnXbLyYs%2BoH4POZPvbybMTRZ8FNXDV%2B%2FMgcoQjbBnx2kRpapYmT55e4c1A2mjtEfzZyp9FBqwULRQtxbMvgLIUi9tCJSyFuTwwzBbBkZQz9qfDp7FzIIvT%2BY7hIwcNSx7TLhbXpxVHLeZoW8VHJ9VVC1l4BJyDnC8ldMmpa48u1fnlmpJjXbmq7j5TwmuLtQLZgS5O0SdJHsDO9g93VSnGVxJt47prll1aOUNAGBzVCETkbVzuMDStM4ru%2F9CAjxU4U8DRz6blnH5%2FEQ2OhvRc3pSBnT7fsdcA%2FI%2F6hTPq%2F22eQAurE91%2BGJ%2FdEpTsajFk8aKPVFb5i%2BBdpbsETFACjSu9jOS0pdTqjgUwGKl91prg6q2JyGbTyE09AbNKsf7k0GogwHnwrWGQ1E1TfbJiCBP7wEgV5Ji%2FHaOqJiStSEKpmcAV7zbUqjxpta56xeMW9sCgPUEmmYBmGqpS7mgT6gE%2BZWuPIvsBbso2x33ivlI5Dr8Cu3rKXvRE3x7iwYVyy3vHRa5wX1i5XDpg%2Fl8wI%2B8tc%2ByaVM5EOVrdaQ0fP5LzQ03wvB%2BpDTjTcUunIQ%2FQrGRRgG%2B04m6wFaK%2BqGwGWYe%2B3xXMNq7ypcGOqgBd3dC4PReoUBsWEZtQgyrpsJ1ugGU2zk2H093Lpj5uYVw0P162A6yKKy99LjBbZ4WevhVPKmcqRerzzW8e5MDo%2F4OCib11xo3Q6zQ5BVRBjAaLW287Cg%2FPZ8qXWGccjyW%2FbXOS4XMoGidqL%2Fbo7A7jn2Pk7%2B%2FOZfmHSdaB4wIGI%2BbZP%2FPkswympWLUSJ%2F%2B9PE9gQVReVM1338y4GVeyPZPJwsaVGo0P5b&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20220809T190600Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFDSKXKFNZ%2F20220809%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e3487574a716f53dd4c5d245b881dd9759499c76d569ff9e1ec430fadc00d3e2",
+        "url": "http://glutenfreegirl.com/2007/11/gratitude-and-sweet-rice-pudding/",
+        "user": 1
+      }
+    }
+  ]

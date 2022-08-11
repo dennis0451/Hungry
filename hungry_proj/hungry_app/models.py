@@ -13,20 +13,15 @@ class AppUser(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [] # Email & Password are required by default.
 
-# class CookBook(models.Model):
-#     name = models.CharField(max_length=255, blank=False)
-
-#     def __str__(self):
-#         return self.name
-
-# # Create your models here.
+class Recipe(models.Model):
+    label = models.CharField(max_length=255, blank=False)
+    image = models.TextField()
+    url = models.TextField()
+    user = models.ManyToManyField(AppUser, related_name="recipes")
 
 
-# class Recipe(models.Model):
-#     title = models.CharField(max_length=255, blank=False)
-#     price = models.CharField(max_length=255)
-#     description = models.CharField(max_length=255)
-#     category = models.ForeignKey(Category, on_delete=models.CASCADE, default=1)
 
-#     def __str__(self):
-#         return self.title
+    def __str__(self):
+        return self.label
+
+

@@ -37,6 +37,8 @@ function App() {
     axios.post('/logout').then((response)=>{
       console.log('response from server: ', response)
       whoAmI()
+      window.location.reload()
+
     })
   }
   console.log(`App.jsx user online: ${user != undefined}`)
