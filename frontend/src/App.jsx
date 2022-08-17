@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
+import BasicExample from './components/BasicExample'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
 import SignUp from './pages/SignUp'
 import UserPage from './pages/UserPage'
 import { HashRouter, Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const getCSRFToken = ()=>{
@@ -63,7 +65,7 @@ function App() {
   return (
     <div className="App">
       {user && <button onClick={logOut}>Logout</button>}
-      <Navbar />
+      {user && <BasicExample />}
       <HashRouter>
         <Routes>
           <Route path='' element={<HomePage user={user}/>}/>

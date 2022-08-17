@@ -30,7 +30,9 @@ function Food(){
                 <input name="food" type="search" placeholder="what's in your fridge?" />
                 <button type="submit">search</button>
             </form>
+            <div className='recipe--div'>
             {recipes}
+            </div>
         </div>
     )
 }

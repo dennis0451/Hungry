@@ -15,8 +15,8 @@ function LoginPage(props) {
             .then((response) => {
                 console.log('response from server: ', response)
                 window.location.reload()
-
             })
+            
     }
 
     if (!userOnline) {

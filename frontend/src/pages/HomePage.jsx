@@ -7,19 +7,12 @@ import Welcome from '../components/Welcome'
 function HomePage(props){
     let userOnline = props.user
 
-    // function test2(){
-    //     axios.post('/test_two',)
-    //     .then((response) => {
-    //         console.log('response from server: ', response)
-    //     })
-        
-    // }
+
 
     console.log(`homepage user : ${userOnline != undefined}`)
     return (
         <div>
 
-            <h1>Hungry Home Page</h1>
             {userOnline !=undefined && <Welcome />}
             {userOnline != undefined && <Food />}
             {(userOnline == undefined) && <Link to="/login"><button>Log In</button></Link>}

@@ -14,6 +14,7 @@ urlpatterns = [
     path('food_run', views.food_run),
     path('favorite', views.favorite),
     path('cookbook', views.cookbook),
+    path('delete', views.delete),
     # path('test_two', views.test_two),
 
     #new

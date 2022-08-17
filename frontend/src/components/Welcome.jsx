@@ -1,11 +1,13 @@
+import CarouselFade from "./Carousel"
 
 function Welcome(){
     return(
         <div>
-            {/* add random bootstrap carousel with food pictures */}
-            <h1>User is logged in. add feature here</h1>
+            <CarouselFade />
+            
         </div>
     )
 }
 
 export default Welcome
+
