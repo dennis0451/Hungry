@@ -39,7 +39,7 @@ function App() {
     axios.post('/logout').then((response)=>{
       console.log('response from server: ', response)
       whoAmI()
-      window.location.reload()
+      .then(window.location.href('/'))
 
     })
   }
@@ -64,8 +64,8 @@ function App() {
 
   return (
     <div className="App">
-      {user && <button onClick={logOut}>Logout</button>}
-      {user && <BasicExample />}
+      {user && <BasicExample user={user} logOut={logOut}/>}
+      {/* {user && <button onClick={logOut}>Logout</button>} */}
       <HashRouter>
         <Routes>
           <Route path='' element={<HomePage user={user}/>}/>

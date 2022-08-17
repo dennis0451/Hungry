@@ -24,7 +24,7 @@ function singleRecipe(props){
     return(
         <div className="card"> 
         <img src={image} className="card--image" alt="" />
-        <p>{label}</p>
+        <p className="food--name">{label}</p>
         {/* <h4>{url}</h4> */}
         <Button variant="primary" size="sm"onClick={viewRecipe}>View Recipe</Button>
         <Button variant="light" size="sm"onClick={removeRecipe}>Remove</Button>

@@ -1,8 +1,30 @@
 import axios from 'axios'
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import { useState } from 'react';
 
+
+
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+
+// function ContainerExample() {
+//   return (
+//     <Container>
+//       <Row>
+//         <Col>1 of 1</Col>
+//       </Row>
+//     </Container>
+//   );
+// }
+
+// export default ContainerExample;
 
 function Recipe(props){
+    // const [checked, setChecked] = useState(false);
+    // console.log(checked)
 
     function addFavorite(){
         let label  = props.label
@@ -29,9 +51,23 @@ function Recipe(props){
     return(
         <div className="card"> 
         <img src={props.image} className="card--image" alt="" />
-        <p>{props.label}</p>
+        <p className="food--name">{props.label}</p>
         <Button variant="primary" size="sm"onClick={openRecipe}>View Recipe</Button>    
-        <button onClick={addFavorite}>save to favorites</button>
+        <Button variant="success" size="sm"onClick={addFavorite}>Save to Favorites</Button>    
+        {/* <ButtonGroup className="mb-2"> */}
+        {/* <ToggleButton
+          id="toggle-check"
+          type="checkbox"
+          variant="success"
+          checked={checked}
+          value="1"
+          onClick={addFavorite}
+          onChange={(e) => setChecked(e.currentTarget.checked)}
+        >
+          Save to Favorites
+        </ToggleButton>
+      </ButtonGroup> */}
+        {/* <button onClick={addFavorite}>save to favorites</button> */}
             {/* <p>{props.source}</p> */}
             {/* <p>other ingredients:</p>
             {ingredients} */}
