@@ -54,23 +54,7 @@ function Recipe(props){
         <p className="food--name">{props.label}</p>
         <Button variant="primary" size="sm"onClick={openRecipe}>View Recipe</Button>    
         <Button variant="success" size="sm"onClick={addFavorite}>Save to Favorites</Button>    
-        {/* <ButtonGroup className="mb-2"> */}
-        {/* <ToggleButton
-          id="toggle-check"
-          type="checkbox"
-          variant="success"
-          checked={checked}
-          value="1"
-          onClick={addFavorite}
-          onChange={(e) => setChecked(e.currentTarget.checked)}
-        >
-          Save to Favorites
-        </ToggleButton>
-      </ButtonGroup> */}
-        {/* <button onClick={addFavorite}>save to favorites</button> */}
-            {/* <p>{props.source}</p> */}
-            {/* <p>other ingredients:</p>
-            {ingredients} */}
+
         </div>
     )
 }

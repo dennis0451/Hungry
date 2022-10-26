@@ -2,130 +2,136 @@
     
 } */
 
-
-
-
 .card {
-    width: 175px;
-    font-size: 12px;
-    flex: 0 0 auto;         /* ADD */
-    display: flex;          /* ADD */
-    flex-direction: row; /* ADD */
-    border-radius: 10px;
-    box-shadow: 1px;
+  width: 175px;
+  font-size: 12px;
+  flex: 0 0 auto; /* ADD */
+  display: flex; /* ADD */
+  flex-direction: row; /* ADD */
+  border-radius: 10px;
+  box-shadow: 1px;
 }
 
 .card--image {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 9px;
-    box-shadow: 10x;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 9px;
+  box-shadow: 10x;
 }
 .cards--list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    overflow-x: auto;
-    padding: 3.5% 5% 5% 5%;
-    /* border-radius: 15%; */
+  display: flex;
+  flex-wrap:wrap;
+  gap: 25px;
+  overflow-x: auto;
+  margin-left: 10%;
+  margin-right: auto;
 
+  /* display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 3%;
+  grid-auto-flow: column; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-top: 10vh;
 }
-
+.card--container{
+   width: fit-content;
+   margin-left: auto;
+   margin-right: auto;
+}
 /* .App{
     background-color: #FD7803 ;
 } */
- .card:hover{
-    opacity: 0.9;
- }
+.card:hover {
+  opacity: 0.9;
+}
 
- .carousel{
-    padding: 1.5%;
-    padding-left: 7%;
-    padding-right: 7%;
-    border-radius: 5%;
-    
- }
+.carousel {
+  padding: 1.5%;
+  padding-left: 7%;
+  padding-right: 7%;
+  border-radius: 5%;
+}
 
- .logo{
-    height: 2.5rem;
- }
+.logo {
+  height: 2.5rem;
+}
 
- .recipe--div{
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 3%;
-    grid-auto-flow: column;
-    padding-top: 2%;
-    /* padding-left: 7%; */
-    /* padding-right: 7%; */
- }
+.recipe--div {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 3%;
+  grid-auto-flow: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
 
- .food--name{
-    font-family: "poppins";
-    font-weight: bold;
-    text-align: center;
-    padding-top: 1px;
- }
+.food--name {
+  font-family: "poppins";
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1px;
+}
 
- body{
-    background-image: url('./static/large.png');
-    background-repeat: no-repeat;
-    background-size:  100vw;
-    /* padding-top: 5%; */
-    background-position:25rem;
- }
+body {
+  background-image: url("./static/large.png");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  /* padding-top: 5%; */
+  background-position: 25rem;
+}
 
- .login--icon{
-    height: 10rem;
-    text-shadow: 10px;
-    background-color: white;
+.login--icon {
+  height: 10rem;
+  text-shadow: 10px;
+  background-color: white;
+}
 
- }
+.log--logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.log--in {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.log--out {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
- .log--logo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- }
- .log--in{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- }
- .log--out{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
- }
+.start {
+  padding-top: 9rem;
+}
 
- .start{
-    padding-top: 9rem;
- }
+.home-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10rem;
+}
 
- .home-button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 10rem;
- }
+.sign--up {
+  padding-top: 10rem;
+  padding-right: 20rem;
+  padding-left: 20rem;
+}
+.log--on {
+  padding-top: 10rem;
+  padding-right: 20rem;
+  padding-left: 20rem;
+}
 
- .sign--up{
-    padding-top: 10rem;
-    padding-right: 20rem;
-    padding-left: 20rem;
- }
- .log--on{
-    padding-top: 10rem;
-    padding-right: 20rem;
-    padding-left: 20rem;
- }
-
- /* .carousel{
+/* .carousel{
     padding-top: -50rem;
  } */
 
- .bootstrap--search{
-    padding-left: 20rem;
-    padding-right: 20rem;
-    margin-top: 0;
- }
+.bootstrap--search {
+  padding-left: 20rem;
+  padding-right: 20rem;
+  margin-top: 0;
+}
