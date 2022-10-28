@@ -36,7 +36,7 @@ function LoginPage(props) {
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="text" placeholder="password" name='password' />
+                        <Form.Control type="password" placeholder="password" name='password' />
                     </Form.Group>
                     <Button variant="outline-primary" type="submit" size='md'>
                         Log In

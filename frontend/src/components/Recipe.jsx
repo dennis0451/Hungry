@@ -1,10 +1,8 @@
-import axios from 'axios'
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import ToggleButton from 'react-bootstrap/ToggleButton';
-import { useState } from 'react';
-
-
+import axios from "axios";
+import Button from "react-bootstrap/Button";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
+import ToggleButton from "react-bootstrap/ToggleButton";
+import { useState } from "react";
 
 // import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -22,44 +20,63 @@ import { useState } from 'react';
 
 // export default ContainerExample;
 
-function Recipe(props){
-    // const [checked, setChecked] = useState(false);
-    // console.log(checked)
+function Recipe(props) {
+  const [fav, setFav] = useState(false);
+  console.log(fav)
 
-    function addFavorite(){
-        let label  = props.label
-// , image:props.image, url:props.url
-    // console.log(props.label, props.url, props.source)
-    axios.post(
-            '/favorite',
-            { 'label' : props.label,
-            'image' : props.image,
-            'url':props.url,   
-         }
-            )
-            .then(response => console.log('added to favorites'))
-            
-        }
+//   function removeButton() {
+//     console.log('saved')
     
-    function openRecipe(){
-        window.open(props.url)
-    }
-    //mapped over ingredients array to create new array of li items
-    // let ingredients = props.items.map(item =>
-    //     <li>{item}</li>
-    // )
-    return(
-        <div className="card"> 
-        <img src={props.image} className="card--image" alt="" />
-        <p className="food--name">{props.label}</p>
-        <Button variant="primary" size="sm"onClick={openRecipe}>View Recipe</Button>    
-        <Button variant="success" size="sm"onClick={addFavorite}>Save to Favorites</Button>    
+//     // return setSaved(!saved)
+//   }
 
-        </div>
-    )
+  function addFavorite() {
+    setFav(!fav)
+    console.log(fav)
+    let label = props.label;
+    axios
+      .post("/favorite", {
+        label: props.label,
+        image: props.image,
+        url: props.url,
+      })
+      .then((response) => console.log("added to favorites"));
+    
+  }
+
+  function openRecipe() {
+    window.open(props.url);
+  }
+
+  //mapped over ingredients array to create new array of li items
+  // let ingredients = props.items.map(item =>
+  //     <li>{item}</li>
+  // )
+  return (
+    <div className="card">
+      <img src={props.image} className="card--image" alt="" />
+      <p className="food--name">{props.label}</p>
+      <Button variant="primary" size="sm" onClick={openRecipe}>
+        View Recipe
+      </Button>
+      {!fav ? (
+        <Button
+          variant="secondary"
+          className="btn--notsaved"
+          size="sm"
+          onClick={addFavorite}
+        >
+          Save to Favorites
+        </Button>
+      ) : (
+        <Button variant="success" size="sm">
+          Saved
+        </Button>
+      )}
+    </div>
+  );
 }
 
-export default Recipe
+export default Recipe;
 
-
-// image={item.recipe.image} ingredients={item.recipe.ingredientLines} directions={item.recipe.url} source={item.recipe.source} 
+// image={item.recipe.image} ingredients={item.recipe.ingredientLines} directions={item.recipe.url} source={item.recipe.source}

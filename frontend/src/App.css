@@ -3,7 +3,7 @@
 } */
 
 .card {
-  width: 175px;
+  width: 180px;
   font-size: 12px;
   flex: 0 0 auto; /* ADD */
   display: flex; /* ADD */
@@ -83,9 +83,14 @@ body {
 }
 
 .login--icon {
-  height: 10rem;
+  /* height: 10rem; */
+  width: 24rem;
   text-shadow: 10px;
   background-color: white;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7%;
 }
 
 .log--logo {
@@ -105,7 +110,7 @@ body {
 }
 
 .start {
-  padding-top: 9rem;
+  padding-top: 5rem;
 }
 
 .home-button {
@@ -134,4 +139,9 @@ body {
   padding-left: 20rem;
   padding-right: 20rem;
   margin-top: 0;
+  margin-bottom: 12rem;
+}
+
+.btn--notsaved{
+  color: brown;
 }
